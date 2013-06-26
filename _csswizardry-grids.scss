@@ -84,7 +84,7 @@ $mobile-first:          true!default;
 /**
  * Set the spacing between your grid items.
  */
-$gutter:                .75vw!default;
+$gutter:                1.5vw!default;
 
 
 /**
@@ -218,6 +218,14 @@ $class-type:            unquote(".");
     @if $use-markup-fix != true{
         letter-spacing:-0.31em;
     }
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 @if $use-markup-fix != true{
@@ -237,7 +245,8 @@ $class-type:            unquote(".");
      * 5. Required to combine fluid widths and fixed gutters.
      */
     #{$class-type}grid__item{
-        display:inline-block;           /* [1] */
+//        display:inline-block;           /* [1] */
+        
         padding-left:$gutter;           /* [2] */
         vertical-align:top;             /* [3] */
         @if $mobile-first == true{
