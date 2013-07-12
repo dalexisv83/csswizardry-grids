@@ -214,7 +214,7 @@ $class-type:            unquote(".");
     list-style:none;                /* [1] */
     margin:0;                       /* [2] */
     padding:0;                      /* [2] */
-    margin-left:-$gutter;           /* [3] */
+//    margin-left:-$gutter;           /* [3] */
     @if $use-markup-fix != true{
         letter-spacing:-0.31em;
     }
@@ -239,7 +239,7 @@ $class-type:            unquote(".");
     #{$class-type}grid__item{
         display:inline-block;           /* [1] */
         
-        padding-left:$gutter;           /* [2] */
+//        padding-left:$gutter;           /* [2] */
         vertical-align:top;             /* [3] */
         @if $mobile-first == true{
             width:100%;                 /* [4] */
